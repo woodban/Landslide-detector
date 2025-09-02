@@ -1,0 +1,69 @@
+Working demonstration: https://youtu.be/FDZPFpbiLaw
+
+
+
+COPY PASTE THE CODE BELOW
+
+
+
+
+#include <LiquidCrystal_I2C.h> // Include LCD library
+
+// Initialize LCD with I2C address 0x27 (change if necessary)
+LiquidCrystal_I2C lcd(0x27, 16, 2); 
+
+const int moistureSensorPin = A0; // Pin connected to Soil Moisture Sensor
+const int vibrationSensorPin = 4; // Pin connected to SW-420 D0
+const int buzzerPin = 3;          // Pin connected to Buzzer
+
+unsigned long buzzerStartTime = 0; // To track when the buzzer started
+bool buzzerActive = false;          // To track if the buzzer is currently active
+
+void setup() {
+    Serial.begin(9600);               // Start serial communication at 9600 baud rate
+    lcd.begin(16, 2);                 // Initialize LCD with 16 columns and 2 rows
+    lcd.backlight();                  // Turn on backlight
+    pinMode(vibrationSensorPin, INPUT); // Set vibration sensor pin as input
+    pinMode(buzzerPin, OUTPUT);      // Set buzzer pin as output
+}
+
+void loop() {
+    int moistureValue = analogRead(moistureSensorPin); // Read moisture level
+    float moisturePercentage = map(moistureValue, 1023, 0, 0, 100); // Convert to percentage
+
+    lcd.setCursor(0, 0);
+    lcd.print("Moisture: ");
+    lcd.print(moisturePercentage);
+    lcd.print("%       "); // Clear any previous numbers
+
+    if (moisturePercentage > 40) { // Change threshold to 40%
+        lcd.setCursor(0, 1);
+        lcd.print("Landslide Alert! ");
+        tone(buzzerPin, 1000); // Activate buzzer if moisture is above threshold
+    } else {
+        noTone(buzzerPin);      // Deactivate buzzer if moisture is below threshold
+        lcd.setCursor(0, 1);
+        lcd.print("                "); // Clear alert message
+    }
+
+    if (digitalRead(vibrationSensorPin) == HIGH) { // Check if vibration is detected
+        if (!buzzerActive) { // If buzzer is not already active
+            Serial.println("Detected vibration... Activating buzzer.");
+            tone(buzzerPin, 1000); // Play a tone on buzzer for vibration detection
+            buzzerStartTime = millis(); // Record start time for buzzer
+            buzzerActive = true; // Set buzzer as active
+        }
+    } else {
+        Serial.println("No vibration detected.");
+    }
+
+    // Check if 2 seconds have passed since buzzer was activated
+    if (buzzerActive && (millis() - buzzerStartTime >= 2000)) {
+        noTone(buzzerPin); // Stop playing any tone on buzzer after 2 seconds
+        Serial.println("Buzzer deactivated.");
+        buzzerActive = false; // Reset buzzer state
+    }
+
+    delay(100); // Delay to avoid flooding serial monitor
+}
+
