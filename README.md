@@ -22,14 +22,6 @@ The following apparatus is required to build the Landslide Detection System:
 
 ---
 
-## Working and Demonstration
-
-### Setup and Code Execution
-
-1.  Assemble the components and connect the Arduino to the computer via USB.
-2.  Upload the project code using the Arduino IDE.
-3.  Open the **Serial Monitor** in the Arduino IDE, set at **9600 baud rate**, to view debug messages.
-
 ### Real-Time Monitoring and Results
 
 The system is designed to provide alerts based on two critical conditions:
@@ -53,7 +45,6 @@ The system is designed to provide alerts based on two critical conditions:
 
 The system offers several advantages for risk mitigation:
 
-* **Early Warning Capability:** Provides real-time alerts for potential landslides, enabling timely evacuations and risk mitigation.
 * **Cost-Effective Solution:** Utilizes affordable components, making it accessible for deployment in various regions without high costs.
 * **Real-Time Data Display:** Displays soil moisture levels and alerts on the 16x2 I2C LCD, facilitating immediate understanding of conditions.
 * **Low Power Consumption:** Operates efficiently, suitable for remote locations with limited power supply.
@@ -67,8 +58,6 @@ The project has certain constraints to consider:
 
 * **Limited Detection Range:** The system may only monitor specific areas, potentially missing landslides occurring outside the monitored range.
 * **Sensitivity Issues:** The vibration sensor may not detect all ground movements, which could lead to false alarms or missed alerts for minor vibrations.
-* **Environmental Sensitivity:** Weather conditions, such as heavy rain or snow, can affect sensor performance and accuracy.
-* **Maintenance Requirements:** Regular maintenance is needed to ensure sensors function properly, as they can become damaged or corroded over time.
 * **Cost Implications:** While initial costs may be low, deploying multiple sensors across larger areas can become expensive.
 
 ---
