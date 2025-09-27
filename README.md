@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project proposes a **cost-effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. Landslides pose significant risks to life, property, and infrastructure, often occurring suddenly and with little warning. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor (e.g., FC-28)** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides real-time alerts through a **16x2 I2C LCD display** and an audible **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
+This project proposes a **cost-effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. Landslides pose significant risks to life, property, and infrastructure, often occurring suddenly and with little warning. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor (e.g., FC-28)** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides real-time alerts through a **16x2 I2C LCD display** and an **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
 
 ---
 
