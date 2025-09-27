@@ -1,4 +1,4 @@
-# Real-Time Landslide Detection System
+#Landslide Detection System
 
 ## Abstract
 
