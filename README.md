@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project proposes a **cost-effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. Landslides pose significant risks to life, property, and infrastructure, often occurring suddenly and with little warning. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor (e.g., FC-28)** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides real-time alerts through a **16x2 I2C LCD display** and an **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
+This project proposes a **cost effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. Landslides pose significant risks to life, property, and infrastructure, often occurring suddenly and with little warning. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides real-time alerts through a **16x2 I2C LCD display** and an **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
 
 ---
 
@@ -16,7 +16,7 @@ The following apparatus is required to build the Landslide Detection System:
 | **SW-420 Vibration Sensor** | Detects ground vibrations signal instability. |
 | **Soil Moisture Sensor (e.g., FC-28)** | Measures soil moisture levels. |
 | **Buzzer** | Sounds alerts for critical conditions. |
-| **16x2 I2C LCD** | Displays real-time data and alerts. |
+| **16x2 I2C LCD** | Displays real time data and alerts. |
 | **Jumper Wires** | Connects components. |
 | **Breadboard** (Optional) | Used for prototyping connections. |
 
@@ -27,7 +27,7 @@ The following apparatus is required to build the Landslide Detection System:
 The system is designed to provide alerts based on two critical conditions:
 
 #### 1. Soil Moisture Alert
-* The LCD displays real-time readings of the soil moisture percentage.
+* The LCD displays real time readings of the soil moisture percentage.
 * If moisture levels **exceed 60%**, the system triggers an alert.
 * The alert message **"Landslide Alert!"** is displayed on the LCD, and an audible alarm is activated through the buzzer.
 
@@ -45,8 +45,8 @@ The system is designed to provide alerts based on two critical conditions:
 
 The system offers several advantages for risk mitigation:
 
-* **Cost-Effective Solution:** Utilizes affordable components, making it accessible for deployment in various regions without high costs.
-* **Real-Time Data Display:** Displays soil moisture levels and alerts on the 16x2 I2C LCD, facilitating immediate understanding of conditions.
+* **Cost Effective Solution:** Utilizes affordable components, making it accessible for deployment in various regions without high costs.
+* **Real Time Data Display:** Displays soil moisture levels and alerts on the 16x2 I2C LCD, facilitating immediate understanding of conditions.
 * **Low Power Consumption:** Operates efficiently, suitable for remote locations with limited power supply.
 * **Scalability:** Easily expandable by adding more sensors to cover larger areas or multiple monitoring points.
 
