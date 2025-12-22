@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This project proposes a **cost effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides real-time alerts through a **16x2 I2C LCD display** and an **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
+This project proposes a **cost effective Landslide Detection System** designed for the timely detection and warning of potential geological hazards. The system uses an **Arduino UNO** microcontroller to integrate a **Soil Moisture Sensor** and an **SW-420 Vibration Sensor** to monitor critical environmental parameters: **soil saturation** and **ground instability**. Utilizing these inputs, the system provides realtime alerts through a **16x2 I2C LCD display** and an **buzzer**, thereby enhancing public safety and enabling proactive responses to potential landslide conditions.
 
 ---
 
@@ -14,7 +14,7 @@ The following apparatus is required to build the Landslide Detection System:
 | :--- | :--- |
 | **Arduino UNO** | Processes sensor inputs and controls outputs. |
 | **SW-420 Vibration Sensor** | Detects ground vibrations signal instability. |
-| **Soil Moisture Sensor (e.g., FC-28)** | Measures soil moisture levels. |
+| **Soil Moisture Sensor** | Measures soil moisture levels. |
 | **Buzzer** | Sounds alerts for critical conditions. |
 | **16x2 I2C LCD** | Displays real time data and alerts. |
 | **Jumper Wires** | Connects components. |
